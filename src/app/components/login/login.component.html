@@ -1,0 +1,50 @@
+<div class="wrapper flex-full-center">
+  <img class="logo" src="../../../assets/logo.svg" alt="logo" />
+  <div class="form-wrapper">
+    <h2 class="title">Добро пожаловать</h2>
+    <h3 class="subtitle">Авторизуйтесь чтобы продолжить</h3>
+  </div>
+
+  <form (ngSubmit)="submit()" class="form" [formGroup]="loginForm">
+    <label for="login">Логин*</label>
+    <div class="field mb-24" [ngClass]="{field_error: isError}">
+      <input
+        id="login"
+        formControlName="login"
+        placeholder="mail@simmmple.com"
+      />
+      <div *ngIf="isError" class="error-attention"></div>
+    </div>
+
+    <label for="pass">Пароль*</label>
+    <div class="field" [ngClass]="{field_error: isError}">
+      <input
+        #passInput
+        id="pass"
+        type="password"
+        formControlName="password"
+        placeholder="Минимум 6 символов"
+      />
+      <div class="pass-view" toggleClass="pass-show"  passView [input]="passInput"></div>
+    </div>
+
+    <div class="panel">
+      <div class="save">
+
+        <div class="checkbox">
+
+          <input #savePass checked type="checkbox" id="saveCheckbox">
+          <label class="checkBox" for="saveCheckbox"></label>
+        </div>
+
+        <span>Запомнить</span>
+
+      </div>
+      <span class="forget">Забыли пароль?</span>
+    </div>
+
+    <button type="submit" class="" mat-flat-button color="warn">
+      Login
+    </button>
+  </form>
+</div>

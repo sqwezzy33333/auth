@@ -1,0 +1,13 @@
+<ng-container *ngFor="let item of toasts; index as index;">
+  <div [@enterAnimation] #el [class]="'toast ' + item.type">
+    <div class="toast-wrapper">
+      <div class="attention-icon"></div>
+      <div class="body">
+        <div class="icon"></div>
+        <div class="toast-message">{{ item.text }}</div>
+      </div>
+      <div class="close" (click)="remove(item)"></div>
+    </div>
+  </div>
+  {{setPosition(el, item)}}
+</ng-container>

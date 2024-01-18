@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="user">
+    <img [src]="user!.userAvatar" class="icon" alt="user-icon" />
+    <div class="user-data">
+      <div class="name">{{ user!.userName }}</div>
+      <div class="user-id">
+        <span class="bold">ID</span> пользователя:
+        <span class="bold">{{ user!.userId }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="message"></div>
+  <input #input type="text" />
+
+  <div class="panel">
+    <button *ngFor="let item of buttons" [class]="item.class" (click)="addToast(input.value, item.type)">
+      {{ item.text }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+@import "../../../mixins.scss";
+
+:host {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Background-basic, #f9f9f9);
+}
+
+.logo {
+  margin-bottom: 100px;
+}
+
+.title {
+  color: #101d2d;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.72px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6f727a;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  margin-bottom: 40px;
+}
+
+.wrapper,
+.form {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.form {
+  width: 410px;
+}
+
+.field {
+  padding: 17px 10px 19px 24px;
+  border-radius: 5px;
+  border: 1px solid var(--table-stroke, #e0e2e7);
+  width: 100%;
+  position: relative;
+
+  & input {
+    border: 0;
+    color: #6f727a;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.28px;
+    outline: none;
+  }
+}
+
+.save {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+#saveCheckbox:checked + .checkBox {
+  border: 0;
+  background: url("../../../assets/chk.svg");
+}
+
+.checkBox {
+  border-radius: 6px;
+  border: 1px solid #4c54f4;
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+
+#saveCheckbox {
+  display: none;
+}
+
+.save span {
+  color: #101d2d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+}
+
+.panel {
+  @include flex-center;
+  justify-content: space-between;
+  margin: 31px 0px;
+  width: 100%;
+}
+
+.forget {
+  color: #4c54f4;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+}
+
+.pass-show {
+  background: url("../../../assets/pass-show.svg") !important;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+label {
+  align-self: flex-start;
+  color: #101d2d;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  margin-bottom: 13px;
+}
+
+button {
+  border-radius: 12px;
+  background: var(--blue-brand, #4c54f4);
+  padding: 16px 32px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+
+.error-attention {
+  position: absolute;
+  background: url("../../../assets/error.svg");
+}
+
+.field_error {
+  border: 1px solid #fc5a5a !important;
+
+  & input::placeholder {
+    color: #fc5a5a;
+  }
+}
+
+.pass-view,
+.error-attention {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.pass-view {
+  background: url("../../../assets/pass-hide.svg");
+}
