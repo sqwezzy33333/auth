@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap');
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Inter;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2,
+h3 {
+  margin: 0;
+}

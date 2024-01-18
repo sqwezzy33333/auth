@@ -1,0 +1,84 @@
+.toast {
+  position: fixed;
+  top: 67px;
+  right: 49px;
+  color: var(--grey-dark, #6f727a);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 25px 0px rgba(68, 68, 68, 0.2);
+  transform: none;
+  transition: 0.5s ease transform;
+}
+
+.to-position {
+  transform: translate(0, -140px);
+}
+
+.error {
+  border-left: 5px solid #fc5a5a;
+
+  & .attention-icon {
+    background-image: url("../../../assets/error.svg");
+  }
+}
+
+.attention {
+  border-left: 5px solid #fcca00;
+
+  & .attention-icon {
+    background-image: url("../../../assets/attention.svg");
+  }
+}
+.success {
+  border-left: 5px solid #249f5d;
+
+  & .attention-icon {
+    background-image: url("../../../assets/success.svg");
+  }
+}
+.message {
+  border-left: 5px solid #4c54f4;
+
+  & .attention-icon {
+    background-image: url("../../../assets/error.svg");
+  }
+}
+
+.toast-wrapper {
+  padding: 18px 24px 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  max-width: 320px;
+}
+
+.attention-icon {
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 24px;
+  min-width: 24px;
+}
+
+.line {
+  width: 5px;
+  height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: url("../../../assets/close.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}

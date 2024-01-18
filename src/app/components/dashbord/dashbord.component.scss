@@ -1,0 +1,85 @@
+@import "../../../mixins.scss";
+
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 67px 51px;
+  background: var(--Background-basic, #f9f9f9);
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 36px;
+  margin-top: 26px;
+
+  & button {
+    border: 0;
+    padding: 16px 31px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.error-btn {
+  background: #fc5a5a;
+}
+
+.panel .attention-btn {
+  background: #fcca00;
+  color: black;
+}
+.success-btn {
+  background: #249f5d;
+}
+.message-btn {
+  background: #4c54f4;
+}
+
+input {
+  width: 617px;
+  border-radius: 5px;
+  border: 1px solid var(--table-stroke, #e0e2e7);
+  background: #fff;
+  padding: 15px;
+  margin-top: 16px;
+}
+
+.name {
+  font-family: DM Sans;
+  font-weight: 700;
+  letter-spacing: -0.28px;
+}
+
+img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.user {
+  @include flex-center;
+  width: fit-content;
+  gap: 10px;
+  color: var(--black-brand, #101d2d);
+  font-size: 14px;
+}
+
+.bold {
+  font-family: DM Sans;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+}
+
+.name {
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+  margin-bottom: 6px;
+}
